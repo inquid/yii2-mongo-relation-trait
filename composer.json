@@ -1,15 +1,19 @@
 {
-    "name": "mootensai/yii2-relation-trait",
+    "name": "inquid/yii2-mongo-relation-trait",
     "type": "yii2-extension",
-    "description": "Yii 2 Models load with relation, & transaction save with relation",
-    "keywords": ["Yii2","relation","load","save","transaction","loadwithrelation", "savewithrelation", "related", "saveall", "loadall"],
-    "homepage": "http://github.com/mootensai/yii2-relation-trait",
+    "description": "Yii 2 Models load with relation, & transaction save with relation for MongoDB",
+    "keywords": ["Yii2","mongo","mongodb","relation","load","save","transaction","loadwithrelation", "savewithrelation", "related", "saveall", "loadall"],
+    "homepage": "http://github.com/inquid/yii2-mongo-relation-trait",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/mootensai/yii2-relation-trait/issues",
-        "source": "https://github.com/mootensai/yii2-relation-trait"
+        "issues": "https://github.com/inquid/yii2-mongo-relation-trait/issues",
+        "source": "https://github.com/mootensai/yii2-mongo-relation-trait"
     },
     "authors": [
+	{
+            "name": "Luis Gonzalez",
+            "email": "contact@inquid.co"
+        },
         {
             "name": "Yohanes Candrajaya",
             "email": "moo.tensai@gmail.com"
