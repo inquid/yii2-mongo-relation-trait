@@ -61,10 +61,10 @@ trait RelationTrait
             $shortName = StringHelper::basename(get_class($this));
             $relData = $this->getRelationData();
             foreach ($POST as $model => $attr) {
-                if($attr == '_id'){
-                    continue;
-                }
                 if (is_array($attr)) {
+                    if($attr == '_id'){
+                        continue;
+                    }
                     if ($model == $shortName) {
                         foreach ($attr as $relName => $relAttr) {
                             if (is_array($relAttr)) {
