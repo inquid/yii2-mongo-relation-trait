@@ -1,18 +1,12 @@
 # yii2-relation-trait
 Yii 2 Models add functionality for load with relation (loadAll($POST)), &amp; transactional save with relation (saveAll())
 
-PLUS soft delete/restore feature!
+PLUS soft delete/restore feature! For MongoDB!
 
-Best work with [mootensai/yii2-enhanced-gii](https://github.com/mootensai/yii2-enhanced-gii)
+Used in [inquid/yii2-enhanced-gii](https://github.com/inquid/yii2-enhanced-gii)
 
-[![Latest Stable Version](https://poser.pugx.org/mootensai/yii2-relation-trait/v/stable)](https://packagist.org/packages/mootensai/yii2-relation-trait)
-[![License](https://poser.pugx.org/mootensai/yii2-relation-trait/license)](https://packagist.org/packages/mootensai/yii2-relation-trait)
-[![Total Downloads](https://img.shields.io/packagist/dt/mootensai/yii2-relation-trait.svg?style=flat-square)](https://packagist.org/packages/mootensai/yii2-relation-trait)
-[![Monthly Downloads](https://poser.pugx.org/mootensai/yii2-relation-trait/d/monthly)](https://packagist.org/packages/mootensai/yii2-relation-trait)
-[![Daily Downloads](https://poser.pugx.org/mootensai/yii2-relation-trait/d/daily)](https://packagist.org/packages/mootensai/yii2-relation-trait)
-[![Join the chat at https://gitter.im/mootensai/yii2-relation-trait](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mootensai/yii2-relation-trait?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Support
+## Support Mootnesai
 
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.svg)](https://gratipay.com/mootensai/)
 
