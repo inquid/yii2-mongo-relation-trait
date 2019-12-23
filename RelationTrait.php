@@ -162,7 +162,6 @@ trait RelationTrait
     {
         /* @var $this ActiveRecord */
         $db = $this->getDb();
-        $trans = $db->beginTransaction();
         $isNewRecord = $this->isNewRecord;
         $isSoftDelete = isset($this->_rt_softdelete);
         try {
@@ -322,17 +321,14 @@ trait RelationTrait
 
 
                 if ($error) {
-                    $trans->rollback();
                     $this->isNewRecord = $isNewRecord;
                     return false;
                 }
-                $trans->commit();
                 return true;
             } else {
                 return false;
             }
         } catch (Exception $exc) {
-            $trans->rollBack();
             $this->isNewRecord = $isNewRecord;
             throw $exc;
         }
@@ -349,7 +345,6 @@ trait RelationTrait
     {
         /* @var $this ActiveRecord */
         $db = $this->getDb();
-        $trans = $db->beginTransaction();
         $isSoftDelete = isset($this->_rt_softdelete);
         try {
             $error = false;
@@ -373,27 +368,21 @@ trait RelationTrait
                 }
             }
             if ($error) {
-                $trans->rollback();
                 return false;
             }
             if ($isSoftDelete) {
                 $this->attributes = array_merge($this->attributes, $this->_rt_softdelete);
                 if ($this->save(false)) {
-                    $trans->commit();
                     return true;
                 } else {
-                    $trans->rollBack();
                 }
             } else {
                 if ($this->delete()) {
-                    $trans->commit();
                     return true;
                 } else {
-                    $trans->rollBack();
                 }
             }
         } catch (Exception $exc) {
-            $trans->rollBack();
             throw $exc;
         }
     }
@@ -412,7 +401,6 @@ trait RelationTrait
 
         /* @var $this ActiveRecord */
         $db = $this->getDb();
-        $trans = $db->beginTransaction();
         try {
             $error = false;
             $relData = $this->getRelationData();
@@ -431,18 +419,14 @@ trait RelationTrait
                 }
             }
             if ($error) {
-                $trans->rollback();
                 return false;
             }
             $this->attributes = array_merge($this->attributes, $this->_rt_softrestore);
             if ($this->save(false)) {
-                $trans->commit();
                 return true;
             } else {
-                $trans->rollBack();
             }
         } catch (Exception $exc) {
-            $trans->rollBack();
             throw $exc;
         }
     }
