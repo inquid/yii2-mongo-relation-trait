@@ -10,9 +10,9 @@
 namespace mootensai\relation;
 
 use Yii;
-use yii\db\ActiveQuery;
-use \yii\db\ActiveRecord;
-use \yii\db\Exception;
+use yii\mongodb\ActiveQuery;
+use yii\mongodb\ActiveRecord;
+use \yii\mongodb\Exception;
 use yii\db\IntegrityException;
 use \yii\helpers\Inflector;
 use \yii\helpers\StringHelper;
@@ -62,6 +62,9 @@ trait RelationTrait
             $relData = $this->getRelationData();
             foreach ($POST as $model => $attr) {
                 if (is_array($attr)) {
+                    if($attr == '_id'){
+                        continue;
+                    }
                     if ($model == $shortName) {
                         foreach ($attr as $relName => $relAttr) {
                             if (is_array($relAttr)) {
