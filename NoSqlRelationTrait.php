@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RelationTrait
+ * NoSqlRelationTrait
  *
  * @author Yohanes Candrajaya <moo.tensai@gmail.com>
  * @since 1.0
@@ -46,7 +46,7 @@ use yii\helpers\ArrayHelper;
  * }
  */
 
-trait RelationTrait
+trait NoSqlRelationTrait
 {
 
     /**
