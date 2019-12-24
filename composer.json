@@ -1,5 +1,5 @@
 {
-    "name": "inquid/yii2-mongo-relation-trait",
+    "name": "inquid/yii2-relation-traits",
     "type": "yii2-extension",
     "description": "Yii 2 Models load with relation, & transaction save with relation for MongoDB",
     "keywords": ["Yii2","mongo","mongodb","relation","load","save","transaction","loadwithrelation", "savewithrelation", "related", "saveall", "loadall"],
